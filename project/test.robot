@@ -20,8 +20,9 @@ ${xpath-click-Dropdown-right}    xpath=//a[@href='#'][@id="memberDropdown"]
 ${xpath--click-button-buypackage}    xpath=//li/div/a[@class="dropdown-item"][contains(text(), 'ซื้อแพ็กเกจ')or contains(text(), 'Buy Package')]
 ${xpath-wait-elelment-package-category}    xpath=//div/div[@class="grid gap-4 justify-center items-stretch p-2 grid-cols-1 md:grid-cols-2"]
 
-# ->
-${xpath-click-select-basic99}    xpath=(//div/div//button[@class="btn-primary w-full min-w-40"])[1]
+# xpath basic 99 ->
+${xpath-click-select-basic}    xpath=(//div/div//button[@class="btn-primary w-full min-w-40"])[1]
+${xpath-click-select-basic99/month}    xpath=//div/button[@class="btn-primary w-full"][contains(text(), 'สมัครแพ็กเกจ') or contains(text(), 'Buy Package')]   
 
 *** Keywords ***
 Open Website Monomax    Open Browser    ${xpath-Open Website Monomax-Staging}      browser=chrome
@@ -40,9 +41,13 @@ click-Dropdown-right    Click Element  ${xpath-click-Dropdown-right}
 click-click-button-buypackage  Click Element    ${xpath--click-button-buypackage}    
 wait-elelment-package-category    Wait Until Element Is Visible     ${xpath-wait-elelment-package-category}  
 
-# ->
 
-click-select-basic99  Click Element    ${xpath-click-select-basic99} 
+
+click-select-basic  Click Element    ${xpath-click-select-basic} 
+# ->
+wait-element-click-select-basic99/month    Wait Until Element Is Visible     ${xpath-click-select-basic99/month}    timeout=15s
+click-select-basic99/month    Click Button    ${xpath-click-select-basic99/month}
+
 
 Login      
     Open Website Monomax 
@@ -55,17 +60,27 @@ Login
     click login
     click accept button 
 
+visit package catetory
+    wait-click-Dropdown-right 
+    click-Dropdown-right 
+    click-click-button-buypackage 
+    wait-elelment-package-category 
+    
+
 *** Test Cases ***
 tc-001 Open browser and visit to monomax website and login with user-passsword
     Login
 
 tc-002 login sucessfully and visit package basic 99 / month
     Login
-    wait-click-Dropdown-right 
-    click-Dropdown-right
-    click-click-button-buypackage
-    wait-elelment-package-category 
-    click-select-basic99 
+    visit package catetory
+    click-select-basic
+    wait-element-click-select-basic99/month 
+    click-select-basic99/month 
+    
+
+
+    
     
     
     
