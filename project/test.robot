@@ -35,7 +35,7 @@ ${xpath-input-credit-date-expire}    xpath=//div/input[@placeholder="วัน�
 ${xpath-input-credit-CVV}            xpath=//div/input[@placeholder="CVV"]
 ${xpath-input-credit-nameuser}           xpath=//div/input[@placeholder="ชื่อผู้ถือบัตร"]
 ${xpath-click-submit-credit}    xpath=//div[@class='my-4 text-base']/following-sibling::button[text()='ชำระเงิน']         
-
+${xpath-check-sucessfully-credit}    xpath=//div[@id="page-new-signup-finish"]//*[contains (text(),'ทำรายการสำเร็จ')]
 
 *** Keywords ***
 Open Website Monomax    Open Browser    ${xpath-Open Website Monomax-Staging}      browser=chrome
@@ -69,7 +69,8 @@ input-credit-date-expire    Input Text    ${xpath-input-credit-date-expire}     
 input-credit-CVV    Input Text    ${xpath-input-credit-CVV}       123 
 input-credit-nameuser    Input Text     ${xpath-input-credit-nameuser}    tester          
 select-onetime    Select Radio Button    package    237
-click-submit-credit    Click Button    ${xpath-click-submit-credit}   
+click-submit-credit    Click Button    ${xpath-click-submit-credit}  
+check-sucessfully-credit   Should Contain    ${xpath-check-sucessfully-credit}    ทำรายการสำเร็จ
 
 Login      
     Open Website Monomax 
@@ -111,6 +112,7 @@ tc-002 login sucessfully and visit package basic 99 / month
     input-credit-nameuser
     select-onetime
     click-submit-credit 
+    check-sucessfully-credit
     
     
     
