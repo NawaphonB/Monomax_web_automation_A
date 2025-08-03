@@ -22,7 +22,8 @@ ${xpath-wait-elelment-package-category}    xpath=//div/div[@class="grid gap-4 ju
 
 # xpath basic 99 ->
 ${xpath-click-select-basic}    xpath=(//div/div//button[@class="btn-primary w-full min-w-40"])[1]
-${xpath-click-select-basic99/month}    xpath=//div/button[@class="btn-primary w-full"][contains(text(), 'สมัครแพ็กเกจ') or contains(text(), 'Buy Package')]   
+${xpath-click-select-basic99/month}    xpath=//div/button[@class="btn-primary w-full"][contains(text(), 'สมัครแพ็กเกจ') or contains(text(), 'Buy Package')or contains(text(), 'เปลี่ยนแพ็กเกจ')]   
+${xpath-wait-element-package_id=237}    xpath=//div/div[@class='container mx-auto px-4']
 
 *** Keywords ***
 Open Website Monomax    Open Browser    ${xpath-Open Website Monomax-Staging}      browser=chrome
@@ -47,7 +48,7 @@ click-select-basic  Click Element    ${xpath-click-select-basic}
 # ->
 wait-element-click-select-basic99/month    Wait Until Element Is Visible     ${xpath-click-select-basic99/month}    timeout=15s
 click-select-basic99/month    Click Button    ${xpath-click-select-basic99/month}
-
+wait-element-package_id=237    Wait Until Element Is Visible    ${xpath-wait-element-package_id=237}    
 
 Login      
     Open Website Monomax 
@@ -77,6 +78,9 @@ tc-002 login sucessfully and visit package basic 99 / month
     click-select-basic
     wait-element-click-select-basic99/month 
     click-select-basic99/month 
+    wait-element-package_id=237
+
+    Sleep    9000
     
 
 
