@@ -1,92 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-04T12:12:48.896498" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-04T16:42:07.825954" rpa="false" schemaversion="5">
 <suite id="s1" name="Test" source="C:\Users\Weeraponk\Documents\GitHub\project\test.robot">
-<test id="s1-t1" name="tc-002 login sucessfully and visit package basic 99 / month" line="99">
+<test id="s1-t1" name="tc-002 login sucessfully and buy package basic 99 / month with recurring" line="118">
 <kw name="Login">
 <kw name="Open Website Monomax">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:49.224453" level="INFO">Opening browser 'chrome' to base url 'https://staging.monomax.me/'.</msg>
+<msg time="2025-08-04T16:42:08.070516" level="INFO">Opening browser 'chrome' to base url 'https://staging.monomax.me/'.</msg>
 <arg>${xpath-Open Website Monomax-Staging}</arg>
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-08-04T12:12:49.224251" elapsed="3.854692"/>
+<status status="PASS" start="2025-08-04T16:42:08.070321" elapsed="3.851865"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:49.223789" elapsed="3.855485"/>
+<status status="PASS" start="2025-08-04T16:42:08.069873" elapsed="3.852493"/>
 </kw>
 <kw name="wait website ready">
 <kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
 <arg>${xpath-wait website ready}</arg>
 <doc>Waits until the element ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.080636" elapsed="0.029222"/>
+<status status="PASS" start="2025-08-04T16:42:11.922764" elapsed="0.029408"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.079705" elapsed="0.030271"/>
+<status status="PASS" start="2025-08-04T16:42:11.922524" elapsed="0.029781"/>
 </kw>
 <kw name="click accept button">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:53.110502" level="INFO">Clicking button 'xpath=//div/button[@id="accept-cookie-button"]'.</msg>
+<msg time="2025-08-04T16:42:11.952879" level="INFO">Clicking button 'xpath=//div/button[@id="accept-cookie-button"]'.</msg>
 <arg>${xpaht-acctep-button}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.110338" elapsed="0.123925"/>
+<status status="PASS" start="2025-08-04T16:42:11.952682" elapsed="0.081839"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.110111" elapsed="0.124491"/>
+<status status="PASS" start="2025-08-04T16:42:11.952446" elapsed="0.082410"/>
 </kw>
 <kw name="click open pop-up login">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:53.236097" level="INFO">Clicking button 'xpath=//button[normalize-space()='เข้าสู่ระบบ'][@class='md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-4 py-2 bg-transparent text-ui-secondary border-2 border-ui-primary hover:bg-ui-primary/30 active:bg-transparent']'.</msg>
+<msg time="2025-08-04T16:42:12.037169" level="INFO">Clicking button 'xpath=//button[normalize-space()='เข้าสู่ระบบ'][@class='md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-4 py-2 bg-transparent text-ui-secondary border-2 border-ui-primary hover:bg-ui-primary/30 active:bg-transparent']'.</msg>
 <arg>${xpath-click open pop-up login}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.235731" elapsed="0.090246"/>
+<status status="PASS" start="2025-08-04T16:42:12.035935" elapsed="0.077187"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.235101" elapsed="0.091165"/>
+<status status="PASS" start="2025-08-04T16:42:12.035134" elapsed="0.078158"/>
 </kw>
 <kw name="click login with pass">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:53.327226" level="INFO">Clicking element 'xpath=//div//span[@class='cursor-pointer']'.</msg>
+<msg time="2025-08-04T16:42:12.114091" level="INFO">Clicking element 'xpath=//div//span[@class='cursor-pointer']'.</msg>
 <arg>${xpath-click login with pass}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.326928" elapsed="0.070517"/>
+<status status="PASS" start="2025-08-04T16:42:12.113804" elapsed="0.070940"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.326541" elapsed="0.071011"/>
+<status status="PASS" start="2025-08-04T16:42:12.113490" elapsed="0.071411"/>
 </kw>
 <kw name="input user">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:53.398072" level="INFO">Typing text '0805741302' into text field 'xpath=//input[@type='text'][@class='form-input w-full']'.</msg>
+<msg time="2025-08-04T16:42:12.185452" level="INFO">Typing text '0805741302' into text field 'xpath=//input[@type='text'][@class='form-input w-full']'.</msg>
 <arg>${xpath-input user}</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.397901" elapsed="0.152671"/>
+<status status="PASS" start="2025-08-04T16:42:12.185270" elapsed="0.189436"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.397687" elapsed="0.153188"/>
+<status status="PASS" start="2025-08-04T16:42:12.185044" elapsed="0.191898"/>
 </kw>
 <kw name="inpur pass">
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:53.552196" level="INFO">Typing password into text field 'xpath=//div/input[@type='password']'.</msg>
-<msg time="2025-08-04T12:12:53.600151" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2025-08-04T16:42:12.383946" level="INFO">Typing password into text field 'xpath=//div/input[@type='password']'.</msg>
+<msg time="2025-08-04T16:42:12.436714" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>${xpath-inpur pass }</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.551874" elapsed="0.127598"/>
+<status status="PASS" start="2025-08-04T16:42:12.383003" elapsed="0.126594"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.551260" elapsed="0.128671"/>
+<status status="PASS" start="2025-08-04T16:42:12.379678" elapsed="0.130899"/>
 </kw>
 <kw name="delay after input data">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath-delay after input data}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.681365" elapsed="0.025181"/>
+<status status="PASS" start="2025-08-04T16:42:12.512317" elapsed="0.028396"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.680677" elapsed="0.025975"/>
+<status status="PASS" start="2025-08-04T16:42:12.511245" elapsed="0.029648"/>
 </kw>
 <kw name="click login">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:53.708387" level="INFO">Clicking element 'xpath=//div/button[@class='md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full']'.</msg>
+<msg time="2025-08-04T16:42:12.545956" level="INFO">Clicking element 'xpath=//div/button[@class='md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full']'.</msg>
 <arg>${xpath-click login }</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.707429" elapsed="0.094637"/>
+<status status="PASS" start="2025-08-04T16:42:12.543417" elapsed="0.096469"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.706826" elapsed="0.095363"/>
+<status status="PASS" start="2025-08-04T16:42:12.541278" elapsed="0.098726"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:49.223521" elapsed="4.578729"/>
+<status status="PASS" start="2025-08-04T16:42:08.069607" elapsed="4.570444"/>
 </kw>
 <kw name="visit package catetory">
 <kw name="wait-click-Dropdown-right">
@@ -94,171 +94,177 @@
 <arg>${xpath-wait-click-Dropdown-right}</arg>
 <arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:53.803009" elapsed="1.203676"/>
+<status status="PASS" start="2025-08-04T16:42:12.641633" elapsed="1.224141"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.802857" elapsed="1.204177"/>
+<status status="PASS" start="2025-08-04T16:42:12.640847" elapsed="1.225038"/>
 </kw>
 <kw name="click-Dropdown-right">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:55.008730" level="INFO">Clicking element 'xpath=//div/button[@class="flex gap-x-1.5"]/span[@class="max-w-40 truncate"]'.</msg>
+<msg time="2025-08-04T16:42:13.866376" level="INFO">Clicking element 'xpath=//div/button[@class="flex gap-x-1.5"]/span[@class="max-w-40 truncate"]'.</msg>
 <arg>${xpath-click-Dropdown-right}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:55.008274" elapsed="0.141560"/>
+<status status="PASS" start="2025-08-04T16:42:13.866221" elapsed="0.084598"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:55.007475" elapsed="0.142631"/>
+<status status="PASS" start="2025-08-04T16:42:13.866016" elapsed="0.085014"/>
 </kw>
 <kw name="click-click-button-buypackage">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:55.151743" level="INFO">Clicking element 'xpath=//div/a[@href="/packages"]'.</msg>
+<msg time="2025-08-04T16:42:13.952335" level="INFO">Clicking element 'xpath=//div/a[@href="/packages"]'.</msg>
 <arg>${xpath-click-button-buypackage}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:55.151295" elapsed="0.963652"/>
+<status status="PASS" start="2025-08-04T16:42:13.951930" elapsed="0.875163"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:55.150503" elapsed="0.964793"/>
+<status status="PASS" start="2025-08-04T16:42:13.951412" elapsed="0.875858"/>
 </kw>
 <kw name="wait-elelment-package-category">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath-wait-elelment-package-category}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:56.116805" elapsed="0.040280"/>
+<status status="PASS" start="2025-08-04T16:42:14.827856" elapsed="0.021877"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:56.115826" elapsed="0.041860"/>
+<status status="PASS" start="2025-08-04T16:42:14.827511" elapsed="0.022324"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:53.802629" elapsed="2.355237"/>
+<status status="PASS" start="2025-08-04T16:42:12.640425" elapsed="2.209454"/>
 </kw>
+<kw name="select package basic">
 <kw name="click-select-basic">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:56.160882" level="INFO">Clicking element 'xpath=(//div/div//button[@class="btn-primary w-full min-w-40"])[1]'.</msg>
+<msg time="2025-08-04T16:42:14.850787" level="INFO">Clicking element 'xpath=(//div/div//button[@class="btn-primary w-full min-w-40"])[1]'.</msg>
 <arg>${xpath-click-select-basic}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:56.160161" elapsed="0.169808"/>
+<status status="PASS" start="2025-08-04T16:42:14.850635" elapsed="0.078102"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:56.159250" elapsed="0.171087"/>
+<status status="PASS" start="2025-08-04T16:42:14.850472" elapsed="0.078697"/>
 </kw>
 <kw name="wait-element-click-select-basic99/month">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath-click-select-basic99/month}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:56.331922" elapsed="0.234352"/>
+<status status="PASS" start="2025-08-04T16:42:14.930186" elapsed="0.231999"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:56.331215" elapsed="0.235295"/>
+<status status="PASS" start="2025-08-04T16:42:14.929396" elapsed="0.232977"/>
 </kw>
 <kw name="click-select-basic99/month">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:56.567496" level="INFO">Clicking button 'xpath=//div/button[@class="btn-primary w-full"][contains(text(), 'สมัครแพ็กเกจ') or contains(text(), 'Buy Package')or contains(text(), 'เปลี่ยนแพ็กเกจ')]'.</msg>
+<msg time="2025-08-04T16:42:15.163462" level="INFO">Clicking button 'xpath=//div/button[@class="btn-primary w-full"][contains(text(), 'สมัครแพ็กเกจ') or contains(text(), 'Buy Package')or contains(text(), 'เปลี่ยนแพ็กเกจ')]'.</msg>
 <arg>${xpath-click-select-basic99/month}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:56.567253" elapsed="0.081912"/>
+<status status="PASS" start="2025-08-04T16:42:15.162949" elapsed="0.057704"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:56.566947" elapsed="0.082477"/>
+<status status="PASS" start="2025-08-04T16:42:15.162612" elapsed="0.058268"/>
 </kw>
 <kw name="wait-element-package_id=237">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath-wait-element-package_id=237}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:56.650878" elapsed="0.044899"/>
+<status status="PASS" start="2025-08-04T16:42:15.221879" elapsed="0.040222"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:56.650221" elapsed="0.045794"/>
+<status status="PASS" start="2025-08-04T16:42:15.221331" elapsed="0.040875"/>
 </kw>
 <kw name="wait-element-payment">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath-wait-element-payment}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:56.697569" elapsed="0.231843"/>
+<status status="PASS" start="2025-08-04T16:42:15.262567" elapsed="0.228778"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:56.696883" elapsed="0.232918"/>
+<status status="PASS" start="2025-08-04T16:42:15.262339" elapsed="0.229108"/>
 </kw>
 <kw name="wait-element-payment-credit">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath-click-payment-credit}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:56.931638" elapsed="0.233340"/>
+<status status="PASS" start="2025-08-04T16:42:15.491788" elapsed="0.221259"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:56.930677" elapsed="0.234672"/>
+<status status="PASS" start="2025-08-04T16:42:15.491584" elapsed="0.221631"/>
 </kw>
 <kw name="click-payment-credit">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:57.167373" level="INFO">Clicking element 'xpath=//div/span[@class="h3-bold mr-4 max-w-full text-start"]'.</msg>
+<msg time="2025-08-04T16:42:15.714075" level="INFO">Clicking element 'xpath=//div/span[@class="h3-bold mr-4 max-w-full text-start"]'.</msg>
 <arg>${xpath-click-payment-credit}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:57.166888" elapsed="0.083291"/>
+<status status="PASS" start="2025-08-04T16:42:15.713793" elapsed="0.046695"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:57.166265" elapsed="0.084304"/>
+<status status="PASS" start="2025-08-04T16:42:15.713422" elapsed="0.047186"/>
 </kw>
+<status status="PASS" start="2025-08-04T16:42:14.850212" elapsed="0.910454"/>
+</kw>
+<kw name="input data payment-credit-card-recurring">
 <kw name="input-id-payment-credit">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:57.252798" level="INFO">Typing text '5555 5555 5555 4444' into text field 'xpath=//input[@placeholder="หมายเลขบัตร"]'.</msg>
+<msg time="2025-08-04T16:42:15.761744" level="INFO">Typing text '5555 5555 5555 4444' into text field 'xpath=//input[@placeholder="หมายเลขบัตร"]'.</msg>
 <arg>${xpath-input-id-payment-credit}</arg>
 <arg>5555 5555 5555 4444</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:57.251983" elapsed="0.129977"/>
+<status status="PASS" start="2025-08-04T16:42:15.761567" elapsed="0.085301"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:57.251587" elapsed="0.130680"/>
+<status status="PASS" start="2025-08-04T16:42:15.761391" elapsed="0.085590"/>
 </kw>
 <kw name="input-credit-date-expire">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:57.384629" level="INFO">Typing text '08/25' into text field 'xpath=//div/input[@placeholder="วันหมดอายุ"]'.</msg>
+<msg time="2025-08-04T16:42:15.847495" level="INFO">Typing text '08/25' into text field 'xpath=//div/input[@placeholder="วันหมดอายุ"]'.</msg>
 <arg>${xpath-input-credit-date-expire}</arg>
 <arg>08/25</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:57.383960" elapsed="0.152041"/>
+<status status="PASS" start="2025-08-04T16:42:15.847327" elapsed="0.059780"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:57.383097" elapsed="0.153155"/>
+<status status="PASS" start="2025-08-04T16:42:15.847114" elapsed="0.060127"/>
 </kw>
 <kw name="input-credit-CVV">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:57.537221" level="INFO">Typing text '123' into text field 'xpath=//div/input[@placeholder="CVV"]'.</msg>
+<msg time="2025-08-04T16:42:15.908062" level="INFO">Typing text '123' into text field 'xpath=//div/input[@placeholder="CVV"]'.</msg>
 <arg>${xpath-input-credit-CVV}</arg>
 <arg>123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:57.536892" elapsed="0.183175"/>
+<status status="PASS" start="2025-08-04T16:42:15.907855" elapsed="0.053350"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:57.536650" elapsed="0.183708"/>
+<status status="PASS" start="2025-08-04T16:42:15.907497" elapsed="0.053823"/>
 </kw>
 <kw name="input-credit-nameuser">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:57.721887" level="INFO">Typing text 'tester' into text field 'xpath=//div/input[@placeholder="ชื่อผู้ถือบัตร"]'.</msg>
+<msg time="2025-08-04T16:42:15.962326" level="INFO">Typing text 'tester' into text field 'xpath=//div/input[@placeholder="ชื่อผู้ถือบัตร"]'.</msg>
 <arg>${xpath-input-credit-nameuser}</arg>
 <arg>tester</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:57.721271" elapsed="0.213242"/>
+<status status="PASS" start="2025-08-04T16:42:15.961858" elapsed="0.059459"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:57.720855" elapsed="0.214006"/>
+<status status="PASS" start="2025-08-04T16:42:15.961472" elapsed="0.059970"/>
 </kw>
-<kw name="select-onetime">
+<kw name="select-recurring">
 <kw name="Select Radio Button" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:57.936642" level="INFO">Selecting '237' from radio button 'package'.</msg>
+<msg time="2025-08-04T16:42:16.021948" level="INFO">Selecting '237' from radio button 'package'.</msg>
 <arg>package</arg>
 <arg>237</arg>
 <doc>Sets the radio button group ``group_name`` to ``value``.</doc>
-<status status="PASS" start="2025-08-04T12:12:57.936352" elapsed="0.048171"/>
+<status status="PASS" start="2025-08-04T16:42:16.021829" elapsed="0.014293"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:57.935737" elapsed="0.049199"/>
+<status status="PASS" start="2025-08-04T16:42:16.021595" elapsed="0.014631"/>
 </kw>
 <kw name="click-submit-credit">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-08-04T12:12:57.987534" level="INFO">Clicking button 'xpath=//div[@class='my-4 text-base']/following-sibling::button[text()='ชำระเงิน']'.</msg>
+<msg time="2025-08-04T16:42:16.036727" level="INFO">Clicking button 'xpath=//div[@class='my-4 text-base']/following-sibling::button[text()='ชำระเงิน']'.</msg>
 <arg>${xpath-click-submit-credit}</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-08-04T12:12:57.986754" elapsed="0.162211"/>
+<status status="PASS" start="2025-08-04T16:42:16.036557" elapsed="0.054846"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:57.986070" elapsed="0.163138"/>
+<status status="PASS" start="2025-08-04T16:42:16.036360" elapsed="0.055210"/>
 </kw>
 <kw name="wait-check-sucessfully-credit">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${xpath-check-sucessfully-credit}</arg>
-<arg>timeout=15s</arg>
+<arg>timeout=30s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2025-08-04T12:12:58.150930" elapsed="11.841833"/>
+<status status="PASS" start="2025-08-04T16:42:16.092048" elapsed="7.689493"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:58.149955" elapsed="11.843151"/>
+<status status="PASS" start="2025-08-04T16:42:16.091794" elapsed="7.689964"/>
 </kw>
-<status status="PASS" start="2025-08-04T12:12:49.222892" elapsed="20.770996"/>
+<status status="PASS" start="2025-08-04T16:42:15.761059" elapsed="8.020800"/>
+</kw>
+<status status="PASS" start="2025-08-04T16:42:08.068594" elapsed="15.713656"/>
 </test>
-<status status="PASS" start="2025-08-04T12:12:48.897610" elapsed="21.098079"/>
+<status status="PASS" start="2025-08-04T16:42:07.827211" elapsed="15.955763"/>
 </suite>
 <statistics>
 <total>

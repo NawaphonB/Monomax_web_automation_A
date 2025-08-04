@@ -68,9 +68,9 @@ input-id-payment-credit    Input Text    ${xpath-input-id-payment-credit}    555
 input-credit-date-expire    Input Text    ${xpath-input-credit-date-expire}     08/25
 input-credit-CVV    Input Text    ${xpath-input-credit-CVV}       123 
 input-credit-nameuser    Input Text     ${xpath-input-credit-nameuser}    tester          
-select-onetime    Select Radio Button    package    237
+select-recurring    Select Radio Button    package    237
 click-submit-credit    Click Button    ${xpath-click-submit-credit}  
-wait-check-sucessfully-credit   wait Until Element Is Visible  ${xpath-check-sucessfully-credit}    timeout=15s
+wait-check-sucessfully-credit   wait Until Element Is Visible  ${xpath-check-sucessfully-credit}    timeout=30s
 check-sucessfully-credit    Element Text Should Contain    ${xpath-check-sucessfully-credit} ทำรายการสำเร็จ
 
 Login      
@@ -84,21 +84,13 @@ Login
     delay after input data 
     click login
     
-
 visit package catetory
     wait-click-Dropdown-right 
     click-Dropdown-right 
     click-click-button-buypackage 
     wait-elelment-package-category 
     
-
-*** Test Cases ***
-tc-001 Open browser and visit to monomax website and login with user-passsword
-    Login
-
-tc-002 login sucessfully and visit package basic 99 / month
-    Login
-    visit package catetory
+select package basic
     click-select-basic
     wait-element-click-select-basic99/month 
     click-select-basic99/month 
@@ -107,16 +99,28 @@ tc-002 login sucessfully and visit package basic 99 / month
     wait-element-payment-credit   
     click-payment-credit 
 
-
-    # กรอกข้อมูลบัตร
+input data payment-credit-card-recurring  
     input-id-payment-credit 
     input-credit-date-expire 
     input-credit-CVV 
     input-credit-nameuser
-    select-onetime
+    select-recurring
     click-submit-credit 
     wait-check-sucessfully-credit
     # check-sucessfully-credit
+
+
+
+*** Test Cases ***
+tc-001 Open browser and visit to monomax website and login with user-passsword
+    Login
+
+tc-002 login sucessfully and buy package basic 99 / month with recurring
+    Login
+    visit package catetory
+    select package basic
+    input data payment-credit-card-recurring  
+
 
     
     
