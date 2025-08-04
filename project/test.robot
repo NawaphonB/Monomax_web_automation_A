@@ -70,18 +70,20 @@ input-credit-CVV    Input Text    ${xpath-input-credit-CVV}       123
 input-credit-nameuser    Input Text     ${xpath-input-credit-nameuser}    tester          
 select-onetime    Select Radio Button    package    237
 click-submit-credit    Click Button    ${xpath-click-submit-credit}  
-check-sucessfully-credit   Should Contain    ${xpath-check-sucessfully-credit}    ทำรายการสำเร็จ
+wait-check-sucessfully-credit   wait Until Element Is Visible  ${xpath-check-sucessfully-credit}    timeout=15s
+check-sucessfully-credit    Element Text Should Contain    ${xpath-check-sucessfully-credit} ทำรายการสำเร็จ
 
 Login      
     Open Website Monomax 
     wait website ready
+    click accept button 
     click open pop-up login
     click login with pass
     input user
     inpur pass
     delay after input data 
     click login
-    click accept button 
+    
 
 visit package catetory
     wait-click-Dropdown-right 
@@ -105,6 +107,7 @@ tc-002 login sucessfully and visit package basic 99 / month
     wait-element-payment-credit   
     click-payment-credit 
 
+
     # กรอกข้อมูลบัตร
     input-id-payment-credit 
     input-credit-date-expire 
@@ -112,8 +115,9 @@ tc-002 login sucessfully and visit package basic 99 / month
     input-credit-nameuser
     select-onetime
     click-submit-credit 
-    check-sucessfully-credit
-    
+    wait-check-sucessfully-credit
+    # check-sucessfully-credit
+
     
     
 

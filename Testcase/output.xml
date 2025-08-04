@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-08-01T17:37:57.607623" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase Login" source="C:\Users\Weeraponk\Documents\GitHub\Testcase\testcase_login.robot">
+<test id="s1-t1" name="LN_002 Success-Login success with mobile" line="12">
+<kw name="Click login" owner="login">
+<kw name="Open monomax website" owner="Keyword">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-01T17:37:58.048383" level="INFO">Opening browser 'Chrome' to base url 'https://staging.monomax.me/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-01T17:37:58.047806" elapsed="4.191377"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-01T17:38:02.240957" elapsed="0.109339"/>
+</kw>
+<status status="PASS" start="2025-08-01T17:37:58.046995" elapsed="4.303658"/>
+</kw>
+<kw name="Go to login menu" owner="Keyword">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${home_login}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-08-01T17:38:02.351602" elapsed="0.223403"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${home_login}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-01T17:38:02.575177" elapsed="0.012500"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-01T17:38:02.588068" level="INFO">Clicking element '//*[@id="topbar-right-nav"]/div/div[2]/button'.</msg>
+<arg>${home_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-01T17:38:02.587852" elapsed="0.113983"/>
+</kw>
+<status status="PASS" start="2025-08-01T17:38:02.350994" elapsed="0.351322"/>
+</kw>
+<status status="PASS" start="2025-08-01T17:37:58.046188" elapsed="4.656263"/>
+</kw>
+<kw name="login by username:${LN_002.username} and password:${LN_002.password}" owner="login" source_name="login by username:${username} and password:${password}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-01T17:38:02.707006" level="INFO">Clicking element '//span[@class="cursor-pointer"]'.</msg>
+<arg>${login_button_by_password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-01T17:38:02.706458" elapsed="0.133729"/>
+</kw>
+<kw name="Input mono username" owner="Keyword">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${login_input_username}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-08-01T17:38:02.844904" elapsed="0.191043"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-01T17:38:03.046526" level="INFO">Typing text '0869998888' into text field '//input[@class="form-input w-full" and @type="text"]'.</msg>
+<arg>${login_input_username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-01T17:38:03.039083" elapsed="0.253224"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-08-01T17:38:02.843679" elapsed="0.448809"/>
+</kw>
+<kw name="Input mono password" owner="Keyword">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${login_input_password}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-08-01T17:38:03.293257" elapsed="0.226790"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-01T17:38:03.520937" level="INFO">Typing text '123456' into text field '//input[@type="password"]'.</msg>
+<arg>${login_input_password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-01T17:38:03.520400" elapsed="0.093395"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-08-01T17:38:03.292737" elapsed="0.321575"/>
+</kw>
+<kw name="Click login button" owner="Keyword">
+<kw name="Wait Until Element Is Enabled" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" start="2025-08-01T17:38:03.617131" elapsed="0.137947"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login_button}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-08-01T17:38:03.757282" elapsed="0.110358"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-01T17:38:03.868402" level="INFO">Clicking element '//button[@class="md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full"]'.</msg>
+<msg time="2025-08-01T17:38:05.203972" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-08-01T17:38:05.204257" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full"&gt;...&lt;/button&gt; is not clickable at point (640, 492). Other element would receive the click: &lt;h4 class="font-bold"&gt;...&lt;/h4&gt;
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77d5de415+77285]
+	GetHandleVerifier [0x0x7ff77d5de470+77376]
+	(No symbol) [0x0x7ff77d3a9a6a]
+	(No symbol) [0x0x7ff77d4083e9]
+	(No symbol) [0x0x7ff77d405d8b]
+	(No symbol) [0x0x7ff77d402dd1]
+	(No symbol) [0x0x7ff77d401ce1]
+	(No symbol) [0x0x7ff77d3f3458]
+	(No symbol) [0x0x7ff77d42860a]
+	(No symbol) [0x0x7ff77d3f2d06]
+	(No symbol) [0x0x7ff77d428820]
+	(No symbol) [0x0x7ff77d45087f]
+	(No symbol) [0x0x7ff77d4283e3]
+	(No symbol) [0x0x7ff77d3f1521]
+	(No symbol) [0x0x7ff77d3f22b3]
+	GetHandleVerifier [0x0x7ff77d8c1efd+3107021]
+	GetHandleVerifier [0x0x7ff77d8bc29d+3083373]
+	GetHandleVerifier [0x0x7ff77d8dbedd+3213485]
+	GetHandleVerifier [0x0x7ff77d5f884e+184862]
+	GetHandleVerifier [0x0x7ff77d60055f+216879]
+	GetHandleVerifier [0x0x7ff77d5e7084+113236]
+	GetHandleVerifier [0x0x7ff77d5e7239+113673]
+	GetHandleVerifier [0x0x7ff77d5ce298+11368]
+	BaseThreadInitThunk [0x0x7ff8f7d0e8d7+23]
+	RtlUserThreadStart [0x0x7ff8f969c34c+44]
+</msg>
+<arg>${login_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="FAIL" start="2025-08-01T17:38:03.867964" elapsed="1.356233">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full"&gt;...&lt;/button&gt; is not clickable at point (640, 492). Other element would receive the click: &lt;h4 class="font-bold"&gt;...&lt;/h4&gt;
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77d5de415+77285]
+	GetHandleVerifier [0x0x7ff77d5de470+77376]
+	(No symbol) [0x0x7ff77d3a9a6a]
+	(No symbol) [0x0x7ff77d4083e9]
+	(No symbol) [0x0x7ff77d405d8b]
+	(No symbol) [0x0x7ff77d402dd1]
+	(No symbol) [0x0x7ff77d401ce1]
+	(No symbol) [0x0x7ff77d3f3458]
+	(No symbol) [0x0x7ff77d42860a]
+	(No symbol) [0x0x7ff77d3f2d06]
+	(No symbol) [0x0x7ff77d428820]
+	(No symbol) [0x0x7ff77d45087f]
+	(No symbol) [0x0x7ff77d4283e3]
+	(No symbol) [0x0x7ff77d3f1521]
+	(No symbol) [0x0x7ff77d3f22b3]
+	GetHandleVerifier [0x0x7ff77d8c1efd+3107021]
+	GetHandleVerifier [0x0x7ff77d8bc29d+3083373]
+	GetHandleVerifier [0x0x7ff77d8dbedd+3213485]
+	GetHandleVerifier [0x0x7ff77d5f884e+184862]
+	GetHandleVerifier [0x0x7ff77d60055f+216879]
+	GetHandleVerifier [0x0x7ff77d5e7084+113236]
+	GetHandleVerifier [0x0x7ff77d5e7239+113673]
+	GetHandleVerifier [0x0x7ff77d5ce298+11368]
+	BaseThreadInitThunk [0x0x7ff8f7d0e8d7+23]
+	RtlUserThreadStart [0x0x7ff8f969c34c+44]
+</status>
+</kw>
+<status status="FAIL" start="2025-08-01T17:38:03.615790" elapsed="1.609338">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full"&gt;...&lt;/button&gt; is not clickable at point (640, 492). Other element would receive the click: &lt;h4 class="font-bold"&gt;...&lt;/h4&gt;
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77d5de415+77285]
+	GetHandleVerifier [0x0x7ff77d5de470+77376]
+	(No symbol) [0x0x7ff77d3a9a6a]
+	(No symbol) [0x0x7ff77d4083e9]
+	(No symbol) [0x0x7ff77d405d8b]
+	(No symbol) [0x0x7ff77d402dd1]
+	(No symbol) [0x0x7ff77d401ce1]
+	(No symbol) [0x0x7ff77d3f3458]
+	(No symbol) [0x0x7ff77d42860a]
+	(No symbol) [0x0x7ff77d3f2d06]
+	(No symbol) [0x0x7ff77d428820]
+	(No symbol) [0x0x7ff77d45087f]
+	(No symbol) [0x0x7ff77d4283e3]
+	(No symbol) [0x0x7ff77d3f1521]
+	(No symbol) [0x0x7ff77d3f22b3]
+	GetHandleVerifier [0x0x7ff77d8c1efd+3107021]
+	GetHandleVerifier [0x0x7ff77d8bc29d+3083373]
+	GetHandleVerifier [0x0x7ff77d8dbedd+3213485]
+	GetHandleVerifier [0x0x7ff77d5f884e+184862]
+	GetHandleVerifier [0x0x7ff77d60055f+216879]
+	GetHandleVerifier [0x0x7ff77d5e7084+113236]
+	GetHandleVerifier [0x0x7ff77d5e7239+113673]
+	GetHandleVerifier [0x0x7ff77d5ce298+11368]
+	BaseThreadInitThunk [0x0x7ff8f7d0e8d7+23]
+	RtlUserThreadStart [0x0x7ff8f969c34c+44]
+</status>
+</kw>
+<status status="FAIL" start="2025-08-01T17:38:02.703914" elapsed="2.521463">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full"&gt;...&lt;/button&gt; is not clickable at point (640, 492). Other element would receive the click: &lt;h4 class="font-bold"&gt;...&lt;/h4&gt;
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77d5de415+77285]
+	GetHandleVerifier [0x0x7ff77d5de470+77376]
+	(No symbol) [0x0x7ff77d3a9a6a]
+	(No symbol) [0x0x7ff77d4083e9]
+	(No symbol) [0x0x7ff77d405d8b]
+	(No symbol) [0x0x7ff77d402dd1]
+	(No symbol) [0x0x7ff77d401ce1]
+	(No symbol) [0x0x7ff77d3f3458]
+	(No symbol) [0x0x7ff77d42860a]
+	(No symbol) [0x0x7ff77d3f2d06]
+	(No symbol) [0x0x7ff77d428820]
+	(No symbol) [0x0x7ff77d45087f]
+	(No symbol) [0x0x7ff77d4283e3]
+	(No symbol) [0x0x7ff77d3f1521]
+	(No symbol) [0x0x7ff77d3f22b3]
+	GetHandleVerifier [0x0x7ff77d8c1efd+3107021]
+	GetHandleVerifier [0x0x7ff77d8bc29d+3083373]
+	GetHandleVerifier [0x0x7ff77d8dbedd+3213485]
+	GetHandleVerifier [0x0x7ff77d5f884e+184862]
+	GetHandleVerifier [0x0x7ff77d60055f+216879]
+	GetHandleVerifier [0x0x7ff77d5e7084+113236]
+	GetHandleVerifier [0x0x7ff77d5e7239+113673]
+	GetHandleVerifier [0x0x7ff77d5ce298+11368]
+	BaseThreadInitThunk [0x0x7ff8f7d0e8d7+23]
+	RtlUserThreadStart [0x0x7ff8f969c34c+44]
+</status>
+</kw>
+<kw name="verified login success" owner="Keyword">
+<status status="NOT RUN" start="2025-08-01T17:38:05.226044" elapsed="0.000088"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2025-08-01T17:38:05.226686" elapsed="0.000231"/>
+</kw>
+<status status="FAIL" start="2025-08-01T17:37:58.045275" elapsed="7.183262">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" class="md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full"&gt;...&lt;/button&gt; is not clickable at point (640, 492). Other element would receive the click: &lt;h4 class="font-bold"&gt;...&lt;/h4&gt;
+  (Session info: chrome=138.0.7204.169); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	GetHandleVerifier [0x0x7ff77d5de415+77285]
+	GetHandleVerifier [0x0x7ff77d5de470+77376]
+	(No symbol) [0x0x7ff77d3a9a6a]
+	(No symbol) [0x0x7ff77d4083e9]
+	(No symbol) [0x0x7ff77d405d8b]
+	(No symbol) [0x0x7ff77d402dd1]
+	(No symbol) [0x0x7ff77d401ce1]
+	(No symbol) [0x0x7ff77d3f3458]
+	(No symbol) [0x0x7ff77d42860a]
+	(No symbol) [0x0x7ff77d3f2d06]
+	(No symbol) [0x0x7ff77d428820]
+	(No symbol) [0x0x7ff77d45087f]
+	(No symbol) [0x0x7ff77d4283e3]
+	(No symbol) [0x0x7ff77d3f1521]
+	(No symbol) [0x0x7ff77d3f22b3]
+	GetHandleVerifier [0x0x7ff77d8c1efd+3107021]
+	GetHandleVerifier [0x0x7ff77d8bc29d+3083373]
+	GetHandleVerifier [0x0x7ff77d8dbedd+3213485]
+	GetHandleVerifier [0x0x7ff77d5f884e+184862]
+	GetHandleVerifier [0x0x7ff77d60055f+216879]
+	GetHandleVerifier [0x0x7ff77d5e7084+113236]
+	GetHandleVerifier [0x0x7ff77d5e7239+113673]
+	GetHandleVerifier [0x0x7ff77d5ce298+11368]
+	BaseThreadInitThunk [0x0x7ff8f7d0e8d7+23]
+	RtlUserThreadStart [0x0x7ff8f969c34c+44]
+</status>
+</test>
+<status status="FAIL" start="2025-08-01T17:37:57.609225" elapsed="7.621603"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Testcase Login" id="s1" pass="0" fail="1" skip="0">Testcase Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
