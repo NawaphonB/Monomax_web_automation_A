@@ -71,7 +71,7 @@ input-credit-nameuser    Input Text     ${xpath-input-credit-nameuser}    tester
 select-recurring    Select Radio Button    package    237
 click-submit-credit    Click Button    ${xpath-click-submit-credit}  
 wait-check-sucessfully-credit   wait Until Element Is Visible  ${xpath-check-sucessfully-credit}    timeout=30s
-check-sucessfully-credit    Element Text Should Contain    ${xpath-check-sucessfully-credit} ทำรายการสำเร็จ
+check-sucessfully-credit     Element Text Should Be    ${xpath-check-sucessfully-credit}    ทำรายการสำเร็จ
 
 Login      
     Open Website Monomax 
@@ -107,9 +107,7 @@ input data payment-credit-card-recurring
     select-recurring
     click-submit-credit 
     wait-check-sucessfully-credit
-    # check-sucessfully-credit
-
-
+    check-sucessfully-credit
 
 *** Test Cases ***
 tc-001 Open browser and visit to monomax website and login with user-passsword
