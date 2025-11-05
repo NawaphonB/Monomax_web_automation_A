@@ -29,7 +29,7 @@ wait element login    Wait Until Element Is Visible    ${input username}    time
 input username    Input Text    ${input username}    ${value-username} 
 input password    Input Text    ${input password}    ${value-Password}
 wait element Click login    Wait Until Element Is Visible    ${Click login}    timeout=15
-Click login        ${Click login}
+# Click login    ${Click login}
   
     
 Input Username - password
@@ -38,7 +38,7 @@ Input Username - password
   input username   
   input password    
   Hide Keyboard
-  Click login    
+  # Click login    
 
 *** Test Cases ***
 tc-001 Open Application Monomax and Login With User - pass 
