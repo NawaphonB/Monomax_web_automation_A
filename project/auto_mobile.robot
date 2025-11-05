@@ -5,7 +5,7 @@ Library    AppiumLibrary
 *** Variables ***
 
 # Pre-Condition
-${Username}    0805741302 
+${Username}    test_auto01
 ${Password}    123456 
 
 # Login-with-user/pass 
