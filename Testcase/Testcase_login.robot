@@ -4,7 +4,8 @@ Resource    ../import.resource
 *** Test Cases ***
 LN_001 Success-Login success with E-mail
     open website Monomax 
-    Wait Element Page Website 
+    Wait Element Page Website
+    Click accept cookie 
     click button login
     wait element button login  
     click select login with password 
@@ -15,7 +16,8 @@ LN_001 Success-Login success with E-mail
 
 LN_002 Success-Login success with mobile
     open website Monomax 
-    Wait Element Page Website 
+    Wait Element Page Website
+    Click accept cookie 
     click button login
     click select login with password 
     Input username    ${LN_002.username}
@@ -30,7 +32,8 @@ LN_002 Success-Login success with mobile
 
 LN_006 Fail-Login fail with E-mail password incorrect 
     open website Monomax 
-    Wait Element Page Website 
+    Wait Element Page Website
+    Click accept cookie 
     click button login
     click select login with password 
     Input username    ${LN_006.username}
@@ -41,7 +44,8 @@ LN_006 Fail-Login fail with E-mail password incorrect
 
 LN_007 Fail-Login fail with mobile password incorrect
     open website Monomax 
-    Wait Element Page Website 
+    Wait Element Page Website
+    Click accept cookie 
     click button login
     click select login with password 
     Input username    ${LN_007.username}
@@ -52,7 +56,8 @@ LN_007 Fail-Login fail with mobile password incorrect
 
 LN_008 Fail-Login fail E-mail not found
     open website Monomax 
-    Wait Element Page Website 
+    Wait Element Page Website
+    Click accept cookie 
     click button login
     click select login with password 
     Input username    ${LN_008.username}
@@ -63,7 +68,8 @@ LN_008 Fail-Login fail E-mail not found
 
 LN_009 Fail-Login fail mobile not found
     open website Monomax 
-    Wait Element Page Website 
+    Wait Element Page Website
+    Click accept cookie 
     click button login
     click select login with password 
     Input username    ${LN_009.username}
