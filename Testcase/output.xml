@@ -1,52 +1,334 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.3.2 (Python 3.11.9 on win32)" generated="2025-11-09T01:54:18.715190" rpa="false" schemaversion="5">
-<suite id="s1" name="Testcase livetv" source="C:\Users\class\OneDrive\เอกสาร\GitHub\Monomax_web_automation\testcase\Testcase_livetv.robot">
-<test id="s1-t1" name="LiveTV_01 User ที่ไม่ได้ Login จะดูได้แค่ช่อง Tier 'ดูได้ทุกคน'" line="6">
+<robot generator="Robot 7.3.2 (Python 3.11.9 on win32)" generated="2025-12-04T17:45:22.278688" rpa="false" schemaversion="5">
+<suite id="s1" name="Testcase package" source="C:\Users\class\OneDrive\เอกสาร\GitHub\Monomax_web_automation\testcase\Testcase_package.robot">
+<test id="s1-t1" name="PK_042 Upgrade จาก Basic รายเดือนไป Standard รายเดือน แบบ recurring ด้วย Credit card สำเร็จบน Web" line="148">
 <kw name="open website Monomax" owner="Keywords_login">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-09T01:54:18.943130" level="INFO">Opening browser 'chrome' to base url 'https://staging.monomax.me/'.</msg>
-<arg>${URL Server}</arg>
-<arg>browser=chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-09T01:54:18.943130" elapsed="12.153071"/>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2025-12-04T17:45:22.595713" level="INFO">&amp;{prefs} = { credentials_enable_service=False | profile.password_manager_enabled=False }</msg>
+<var>&amp;{prefs}</var>
+<arg>credentials_enable_service=${FALSE}</arg>
+<arg>profile.password_manager_enabled=${FALSE}</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2025-12-04T17:45:22.595713" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-11-09T01:54:18.942028" elapsed="12.154173"/>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-12-04T17:45:22.595713" level="INFO">${chrome_options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002CFBCCA59D0&gt;</msg>
+<var>${chrome_options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-12-04T17:45:22.595713" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${chrome_options}</arg>
+<arg>add_experimental_option</arg>
+<arg>prefs</arg>
+<arg>${prefs}</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-12-04T17:45:22.595713" elapsed="0.000000"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:22.600026" level="INFO">Opening browser 'chrome' to base url 'https://staging.monomax.me/'.</msg>
+<arg>${URL Server}</arg>
+<arg>chrome</arg>
+<arg>options=${chrome_options}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-04T17:45:22.595713" elapsed="15.497491"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:22.595713" elapsed="15.498502"/>
 </kw>
 <kw name="Wait Element Page Website" owner="Keywords_login">
 <kw name="Element Should Be Enabled" owner="SeleniumLibrary">
 <arg>${Wait Element Page Website}</arg>
 <doc>Verifies that element identified by ``locator`` is enabled.</doc>
-<status status="PASS" start="2025-11-09T01:54:31.096201" elapsed="0.057387"/>
+<status status="PASS" start="2025-12-04T17:45:38.095232" elapsed="0.029909"/>
 </kw>
-<status status="PASS" start="2025-11-09T01:54:31.096201" elapsed="0.057387"/>
+<status status="PASS" start="2025-12-04T17:45:38.095232" elapsed="0.029909"/>
 </kw>
 <kw name="Click accept cookie" owner="Keywords_livetv">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-09T01:54:31.154606" level="INFO">Clicking element '//button[@type="button"][@id="accept-cookie-button"]'.</msg>
+<msg time="2025-12-04T17:45:38.126279" level="INFO">Clicking element '//button[@type="button"][@id="accept-cookie-button"]'.</msg>
 <arg>${accept cookie}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-09T01:54:31.154606" elapsed="0.063421"/>
+<status status="PASS" start="2025-12-04T17:45:38.126279" elapsed="0.090731"/>
 </kw>
-<status status="PASS" start="2025-11-09T01:54:31.153588" elapsed="0.064439"/>
+<status status="PASS" start="2025-12-04T17:45:38.126279" elapsed="0.090731"/>
 </kw>
-<kw name="Click-element-menu-liveTv" owner="Keywords_livetv">
+<kw name="click button login" owner="Keywords_login">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-09T01:54:31.223325" level="INFO">Clicking element '//a[@class="text-white-primary" and (contains(@title, "รายการสด") or contains(@title, "Live"))]'.</msg>
-<arg>${menu-liveTv}</arg>
+<msg time="2025-12-04T17:45:38.221799" level="INFO">Clicking element '//button[normalize-space()='เข้าสู่ระบบ'][@class='md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-4 py-2 bg-transparent text-ui-secondary border-2 border-ui-primary hover:bg-ui-primary/30 active:bg-transparent']'.</msg>
+<arg>${Element button Login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-09T01:54:31.218027" elapsed="2.007785"/>
+<status status="PASS" start="2025-12-04T17:45:38.221268" elapsed="0.066495"/>
 </kw>
-<status status="PASS" start="2025-11-09T01:54:31.218027" elapsed="2.007785"/>
+<status status="PASS" start="2025-12-04T17:45:38.221268" elapsed="0.066495"/>
+</kw>
+<kw name="wait element button login" owner="Keywords_login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${wait element button login}</arg>
+<arg>timeout=20</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:38.288869" elapsed="0.306774"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:38.287763" elapsed="0.307880"/>
+</kw>
+<kw name="click select login with password" owner="Keywords_login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:38.595643" level="INFO">Clicking element '//div//span[@class='cursor-pointer']'.</msg>
+<arg>${Element select login with password}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:38.595643" elapsed="0.131513"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:38.595643" elapsed="0.131513"/>
+</kw>
+<kw name="Input username" owner="Keywords_login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element-Field-username}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:38.727156" elapsed="0.019712"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:38.746868" level="INFO">Typing text 'test_pk_042' into text field '//input[@type='text'][@class='form-input w-full']'.</msg>
+<arg>${Element-Field-username}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:38.746868" elapsed="0.077167"/>
+</kw>
+<arg>${PK_042.username}</arg>
+<status status="PASS" start="2025-12-04T17:45:38.727156" elapsed="0.096879"/>
+</kw>
+<kw name="Input password" owner="Keywords_login">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Element-Field-password}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:38.824035" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:38.824035" level="INFO">Typing text '123456' into text field '//div/input[@type='password']'.</msg>
+<arg>${Element-Field-password}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:38.824035" elapsed="0.055578"/>
+</kw>
+<arg>${PK_042.password}</arg>
+<status status="PASS" start="2025-12-04T17:45:38.824035" elapsed="0.055578"/>
+</kw>
+<kw name="click button submit" owner="Keywords_login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:38.879613" level="INFO">Clicking element '//div/button[@class='md:block rounded-lg font-bold whitespace-nowrap transition duration-200 ease-in-out px-6 py-3 bg-ui-primary text-ui-secondary hover:bg-ui-primary-hover active:bg-ui-primary focus:outline-none focus:ring focus:ring-ui-primary-stroke w-full']'.</msg>
+<arg>${Click login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:38.879613" elapsed="0.053188"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:38.879613" elapsed="0.053188"/>
+</kw>
+<kw name="Visit to page package category" owner="Keywords_package">
+<try>
+<branch type="TRY">
+<kw name="Wait element nav profile non package Is Visible" owner="Keywords_package">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:42.194840" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-162.png"&gt;&lt;img src="selenium-screenshot-162.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-12-04T17:45:42.194840" level="FAIL">Element '//*[@id='topbar-right-nav']//button[.//i[contains(@class,'chevron')]]' not visible after 3 seconds.</msg>
+<arg>${nav profile non package}</arg>
+<arg>timeout=3</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2025-12-04T17:45:38.933812" elapsed="3.261028">Element '//*[@id='topbar-right-nav']//button[.//i[contains(@class,'chevron')]]' not visible after 3 seconds.</status>
+</kw>
+<status status="FAIL" start="2025-12-04T17:45:38.933812" elapsed="3.261028">Element '//*[@id='topbar-right-nav']//button[.//i[contains(@class,'chevron')]]' not visible after 3 seconds.</status>
+</kw>
+<kw name="Click nav profile non package" owner="Keywords_package">
+<status status="NOT RUN" start="2025-12-04T17:45:42.194840" elapsed="0.000000"/>
+</kw>
+<kw name="Click menu buy package element A" owner="Keywords_package">
+<status status="NOT RUN" start="2025-12-04T17:45:42.194840" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2025-12-04T17:45:38.933812" elapsed="3.261028">Element '//*[@id='topbar-right-nav']//button[.//i[contains(@class,'chevron')]]' not visible after 3 seconds.</status>
+</branch>
+<branch type="EXCEPT">
+<kw name="Wait element for nav profile has package Is Visible" owner="Keywords_package">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${nav profile has package}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:42.196845" elapsed="0.021939"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.194840" elapsed="0.023944"/>
+</kw>
+<kw name="Click nav profile has package" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:42.218784" level="INFO">Clicking element '//li[@class="nav-item dropdown member-dropdown"]/a[@id="memberDropdown"]'.</msg>
+<arg>${nav profile has package}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:42.218784" elapsed="0.071928"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.218784" elapsed="0.071928"/>
+</kw>
+<kw name="Click menu buy package element B" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:42.290712" level="INFO">Clicking element '//a[@class="dropdown-item"][contains(text(), "ซื้อแพ็กเกจ") or contains(text(), "Buy Package")]'.</msg>
+<arg>${Select menu package 2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:42.290712" elapsed="0.598853"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.290712" elapsed="0.598853"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.194840" elapsed="0.694725"/>
+</branch>
+<status status="PASS" start="2025-12-04T17:45:38.933812" elapsed="3.955753"/>
+</try>
+<kw name="Wait element page package category" owner="Keywords_package">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Package category}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:42.889565" elapsed="0.016806"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.889565" elapsed="0.016806"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:38.933812" elapsed="3.972559"/>
+</kw>
+<kw name="Upgrade With Select package standard 299 Recurring with Credit card" owner="Keywords_package">
+<kw name="Wait element Package standard" owner="Keywords_package">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Package standard}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:42.906371" elapsed="0.017183"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.906371" elapsed="0.017183"/>
+</kw>
+<kw name="Select Package standard" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:42.923554" level="INFO">Clicking element '//div[@class="relative mt-3 rounded-lg brand-grad p-[2px]"]//button[@class="btn-primary w-full min-w-40"]'.</msg>
+<arg>${Package standard}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:42.923554" elapsed="0.053723"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.923554" elapsed="0.053723"/>
+</kw>
+<kw name="Wait element button buy package" owner="Keywords_package">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${button buy package}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:42.977277" elapsed="0.244112"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.977277" elapsed="0.244112"/>
+</kw>
+<kw name="Click button buy package" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:43.222463" level="INFO">Clicking element '//div[@class="flex-shrink-0 pt-4"]/button[@type="button"]'.</msg>
+<arg>${button buy package}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:43.222463" elapsed="0.171994"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:43.221389" elapsed="0.173068"/>
+</kw>
+<kw name="wait element payment type" owner="Keywords_package">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${credit card}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:43.395459" elapsed="0.483099"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:43.394457" elapsed="0.485203"/>
+</kw>
+<kw name="Click input credit card" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:43.880770" level="INFO">Clicking element '//button[@class="flex items-center justify-between w-full p-4 bg-ui-tertiary rounded-md border border-ui-outline hover:bg-ui-tertiary-hover"]//span[@class="h3-bold mr-4 max-w-full text-start"]'.</msg>
+<arg>${credit card}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:43.880770" elapsed="0.176739"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:43.879660" elapsed="0.177849"/>
+</kw>
+<kw name="Input number card" owner="Keywords_package">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.057509" level="INFO">Typing text '4111 1111 1111 1111' into text field '//div[@class="space-y-3"]//input[contains(@placeholder, 'หมายเลขบัตร') or contains(@placeholder, 'Card number')]'.</msg>
+<arg>${input card number}</arg>
+<arg>${card_number}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.057509" elapsed="0.123869"/>
+</kw>
+<arg>${PK_042.card_number}</arg>
+<status status="PASS" start="2025-12-04T17:45:44.057509" elapsed="0.123869"/>
+</kw>
+<kw name="Click input date expire" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.181378" level="INFO">Clicking element '//div[@class="space-y-3"]//input[contains(@placeholder, 'วันหมดอายุ') or contains(@placeholder, 'Expiration date')]'.</msg>
+<arg>${input date expire}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.181378" elapsed="0.048390"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:44.181378" elapsed="0.048390"/>
+</kw>
+<kw name="input date expire" owner="Keywords_package">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.230775" level="INFO">Typing text '03 / 26' into text field '//div[@class="space-y-3"]//input[contains(@placeholder, 'วันหมดอายุ') or contains(@placeholder, 'Expiration date')]'.</msg>
+<arg>${input date expire}</arg>
+<arg>${date_expire}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.230775" elapsed="0.084988"/>
+</kw>
+<arg>${PK_042.date_expire}</arg>
+<status status="PASS" start="2025-12-04T17:45:44.229768" elapsed="0.085995"/>
+</kw>
+<kw name="Click input CVV" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.315763" level="INFO">Clicking element '//div[@class="space-y-3"]//input[contains(@placeholder, 'CVV')]'.</msg>
+<arg>${input cvv}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.315763" elapsed="0.108517"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:44.315763" elapsed="0.108517"/>
+</kw>
+<kw name="input CVV" owner="Keywords_package">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.438573" level="INFO">Typing text '123' into text field '//div[@class="space-y-3"]//input[contains(@placeholder, 'CVV')]'.</msg>
+<arg>${input CVV}</arg>
+<arg>${CVV}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.438573" elapsed="0.038979"/>
+</kw>
+<arg>${PK_042.CVV}</arg>
+<status status="PASS" start="2025-12-04T17:45:44.424280" elapsed="0.053272"/>
+</kw>
+<kw name="Click input cardholder_name" owner="Keywords_package">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.477552" level="INFO">Clicking element '//div[@class="space-y-3"]//input[contains(@placeholder, 'ชื่อผู้ถือบัตร') or contains(@placeholder, 'Cardholder name')]'.</msg>
+<arg>${input Cardholder name}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.477552" elapsed="0.095890"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:44.477552" elapsed="0.095890"/>
+</kw>
+<kw name="input cardholder_name" owner="Keywords_package">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.573442" level="INFO">Typing text 'TESTER' into text field '//div[@class="space-y-3"]//input[contains(@placeholder, 'ชื่อผู้ถือบัตร') or contains(@placeholder, 'Cardholder name')]'.</msg>
+<arg>${input Cardholder name}</arg>
+<arg>${cardholder_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.573442" elapsed="0.032717"/>
+</kw>
+<arg>${PK_042.cardholder_name}</arg>
+<status status="PASS" start="2025-12-04T17:45:44.573442" elapsed="0.032717"/>
+</kw>
+<kw name="Check Radio-btn recurring for 299" owner="Keywords_package">
+<kw name="Select Radio Button" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:44.606159" level="INFO">Selecting '313' from radio button 'package'.</msg>
+<arg>package</arg>
+<arg>313</arg>
+<doc>Sets the radio button group ``group_name`` to ``value``.</doc>
+<status status="PASS" start="2025-12-04T17:45:44.606159" elapsed="0.017055"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:44.606159" elapsed="0.017055"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:42.906371" elapsed="1.716843"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-09T01:54:35.226024" level="INFO">Slept 2 seconds.</msg>
-<arg>time_=2s</arg>
+<msg time="2025-12-04T17:45:47.624493" level="INFO">Slept 3 seconds.</msg>
+<arg>time_=3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-09T01:54:33.225812" elapsed="2.000212"/>
+<status status="PASS" start="2025-12-04T17:45:44.623214" elapsed="3.001279"/>
 </kw>
-<status status="PASS" start="2025-11-09T01:54:18.940809" elapsed="16.285215"/>
+<status status="PASS" start="2025-12-04T17:45:22.595713" elapsed="25.030675"/>
 </test>
-<status status="PASS" start="2025-11-09T01:54:18.716301" elapsed="16.510755"/>
+<status status="PASS" start="2025-12-04T17:45:22.278688" elapsed="25.353727"/>
 </suite>
 <statistics>
 <total>
@@ -55,11 +337,9 @@
 <tag>
 </tag>
 <suite>
-<stat name="Testcase livetv" id="s1" pass="1" fail="0" skip="0">Testcase livetv</stat>
+<stat name="Testcase package" id="s1" pass="1" fail="0" skip="0">Testcase package</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-11-09T01:54:18.913774" level="ERROR">Error in file 'C:\Users\class\OneDrive\เอกสาร\GitHub\Monomax_web_automation\import.resource' on line 7: Error in file 'C:\Users\class\OneDrive\เอกสาร\GitHub\Monomax_web_automation\Testcase\Testcase_login.robot' on line 4: Resource file with 'Test Cases' section is invalid.</msg>
-<msg time="2025-11-09T01:54:18.937594" level="ERROR">Error in file 'C:\Users\class\OneDrive\เอกสาร\GitHub\Monomax_web_automation\import.resource' on line 12: Error in file 'C:\Users\class\OneDrive\เอกสาร\GitHub\Monomax_web_automation\Testcase\Testcase_livetv.robot' on line 4: Resource file with 'Test Cases' section is invalid.</msg>
 </errors>
 </robot>
